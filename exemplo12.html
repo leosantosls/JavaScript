@@ -1,38 +1,46 @@
 <html>
+<head><title>exemplo12</title>
+<meta charset="utf-8">
+<style>
+  body{
+ background-color:black;
+ color:white;
+}
 
- <head>
-      <title>Exemplo 12</title>
-        <meta charset="utf-8">
-   <script>
-     function cuboDoNumero(numero)
-        {
-         var cubo=numero*numero*numero;
-         return cubo;
-        }
-     function evento()
-        {   
-         var num_valor=window.document.getElementById("num").value;
-         var resl="O cubo do número é igual a: "+cuboDoNumero(num_valor);
-         window.document.getElementById("mensagem").innerHTML=resl;
-        }
-   </script>
- </head>
+</style>
+<script>
+ function cuboDoNumero(numero,expo)
+{
+      var cubo = Math.pow(numero,expo);
+      return cubo;
+      }
+       function evento()
+{
+       var nu=window.document.getElementById("num").value;
+       var nu2=window.document.getElementById("num2").value;
+       var resl="O valor do número elevado a "+nu2+" é igual a "+cuboDoNumero(nu,nu2);
+        window.document.getElementById("mensagem").innerHTML=resl;
+}
+  
+</script>
+</head>
 
- <body><center>
-    <h1> Retornando o Valor de uma Função</h1>
-      <table>
-         <tr>
-          <td width="150">digite um número:</td>
-          <td width="30"><input type="text" id="num" value=" " size="3"/></td>
-         </tr>
-      
-         <tr>
-          <td width="30" colspan="2" align="center"><input type="button" value="calcula" onclick="evento()"/></td>
-         </tr>
-      </table>
-        <br>
-       <p id="mensagem"></p>
-
- </center></body>
-
+   <body> <center>
+   <h1 >RETORNANDO VALOR DE UMA FUNÇÃO</H1>
+    <TABLE >
+      <tr>
+      <td width="150">Digite um número:</td>
+      <td width="30"><input type="text" id="num" value="" size="3" Placeholder="Digite..."/></td>
+       </tr>
+       <tr>
+      <td width="150">Digite um expoente:</td>
+      <td width="30"><input type="text" id="num2" value="" size="3" Placeholder="Digite..."/></td>
+       </tr>
+       <tr>
+        <td width="30" colspan="2" align="center"><input type="button" value="calcula" onclick="evento()"/></td>
+        </tr>
+       </table>
+       <br>
+       <p id="mensagem"></p>    
+    </center></body>
 </html>
